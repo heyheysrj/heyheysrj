@@ -14,3 +14,18 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+🔭 I’m currently working on ...my careen in education, developing students' ability to self-advocate via integration of cutting-edge technologies.
+
+🌱 I’m currently learning ... the basics 
+
+As a high-school Computer Science Teacher, I teach the following courses:
+- AP Computer Science Principles, 
+- Introduction to Software and Technology, and 
+- Business and Technology
+  
+👯 I would love to connect with other educators and
+professionals who are open to sharing our time and knowledge together.
+
+- 📫 Reach me via email: ShahrukhJiwani@sjiwani.onl
+- ⚡ Visit my portfolio website: sjiwani.onl
