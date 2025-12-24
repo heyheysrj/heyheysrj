@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTE Coach e-portfolio - Introduction</title>
+    <style>
+        /* General Reset and Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #555;
+            background-color: #f8f9fa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #337ab7;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #23527c;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        .nav-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            color: #666;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 10px 0;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #000;
+        }
+
+        /* Dropdown Menu */
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 250px;
+            flex-direction: column;
+            z-index: 1000;
+            border: 1px solid #eee;
+        }
+
+        nav ul li:hover ul {
+            display: flex;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+            border-bottom: 1px solid #f1f1f1;
+            text-transform: none;
+            font-size: 13px;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            min-height: 80vh;
+        }
+
+        /* Content Sections */
+        .content-wrapper {
+            padding: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Image Grid Mockup */
+        .image-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .image-placeholder {
+            flex: 1;
+            background-color: #eee;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+
+        /* Two Column Layout for Links Section */
+        .columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .col {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .resource-link {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .resource-link strong {
+            display: block;
+            color: #333;
+        }
+
+        .resource-link span {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #333;
+            color: #fff;
+            font-size: 13px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #ccc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                border-top: 1px solid #eee;
+                z-index: 1000;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0;
+                border-bottom: 1px solid #f9f9f9;
+            }
+
+            nav ul li a {
+                padding: 15px 20px;
+            }
+
+            nav ul li ul {
+                position: static;
+                box-shadow: none;
+                background: #f9f9f9;
+                display: none;
+            }
+            
+            nav ul li:hover ul {
+                display: block;
+            }
+
+            .image-row {
+                flex-direction: column;
+            }
+            
+            .content-wrapper {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="site-title"><a href="#" style="color:inherit;">ISTE Coach e-portfolio</a></div>
+        <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Introduction</a></li>
+                <li>
+                    <a href="#">ISTE Standards ▾</a>
+                    <ul>
+                        <li><a href="#">Standard 1: Visionary Leadership</a></li>
+                        <li><a href="#">Standard 2: Teaching, Learning, and Assessments</a></li>
+                        <li><a href="#">Standard 3: Digital Age Learning Environments</a></li>
+                        <li><a href="#">Standard 4: Professional Development</a></li>
+                        <li><a href="#">Standard 5: Digital Citizenship</a></li>
+                        <li><a href="#">Standard 6: Content Knowledge</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Coach Project</a></li>
+                <li><a href="#">Goals and Future Plans</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="content-wrapper">
+            
+            <h2>Introduction</h2>
+            
+            <!-- Placeholder for Images -->
+            <div class="image-row">
+                <div class="image-placeholder">Picture 1</div>
+                <div class="image-placeholder">Picture 2</div>
+                <div class="image-placeholder">Picture 3</div>
+            </div>
+
+            <p><strong>Welcome to my ISTE Portfolio!</strong></p>
+            <p>My name is Shahrukh Jiwani and I have been a teacher in Georgia since 2020, and I am in my 3rd year of teaching Business & Computer Science. I am currently teaching Business & Technology, Introduction to Software & Technology, AP Computer Science Principles at Parkview High School in Gwinnett County, GA.</p>
+
+          Note: the remainder of this website is still in development (primarily being vibe coded). 
+            <p>Prior to my position at [Current School Name] I was employed at [Previous School Name]. At [Previous School Name] I taught [Subjects], and served as the [Extracurricular Role] for [Number] years. During my employment at [Previous School Name], I attended various technology related professional development seminars in my state including [Conference Names].</p>
+            
+            <p>These seminars peaked my interest and guided me to beginning my Master's of Science in Educational Technology at [University Name]. This masters program has enhanced my understanding of the importance and best ways to implement technology in education. Furthermore, this program has introduced me to the International Society of Technology Education (ISTE) Coach Standards.</p>
+
+            <h3>ISTE</h3>
+            <p>ISTE standards are put in place to create technology influenced learning experiences that engage, challenge, and assess students understanding of content. This portfolio will display my proficiency of implementing these standards in my [Subject Area] student-centered classroom.</p>
+            <p><a href="#" target="_blank">View ISTE Standards Official Website</a></p>
+
+            <hr style="margin: 40px 0; border: 0; border-top: 1px solid #eee;">
+
+            <h3>Websites / Navigation</h3>
+            <p>Below you will find links provided for students to access resources and the [University Name] master's program below. Feel free to navigate throughout the portfolio. The drop down main menu can be found in the top left of the screen (or top right on mobile). This menu is available at all times and will allow you to navigate throughout the entire website.</p>
+
+            <div class="columns">
+                <div class="col">
+                    <h4>[Teacher Name] Online Resources</h4>
+                    <br>
+                    <div class="resource-link">
+                        <strong>Website</strong>
+                        <a href="#" target="_blank">[Insert Class Website Link]</a>
+                    </div>
+                    <div class="resource-link">
+                        <strong>LMS Group</strong>
+                        <a href="#" target="_blank">[Insert LMS Group Link]</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h4>[University Name] Masters Program</h4>
+                    <br>
+                    <div class="resource-link">
+                        <strong>Educational Technology Program</strong>
+                        <a href="#" target="_blank">[Insert Program Link]</a>
+                    </div>
+                    <div class="resource-link">
+                        <strong>Course Catalog</strong>
+                        <a href="#" target="_blank">View Course Catalog</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>ISTE Coach e-portfolio by Shahrukh Jiwani</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('main-nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            } else {
+                nav.classList.add('active');
+            }
+        }
+    </script>
+
+</body>
+</html>
